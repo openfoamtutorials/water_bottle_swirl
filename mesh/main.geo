@@ -33,6 +33,7 @@ outerlines[] = {l0};
 Line Loop(ce++) = {l0 : l0 + 4};
 innersurface = ce;
 Plane Surface(ce++) = {ce - 2};
+// Recombine Surface{innersurface};
 
 // outside bottle
 p0 = ce;
@@ -69,6 +70,7 @@ outerlines[] += {l0 : l0 + 4};
 Line Loop(ce++) = outerlines[];
 outersurface = ce;
 Plane Surface(ce++) = {ce - 2};
+// Recombine Surface{outersurface};
 
 // rotate
 Rotate {{0,1,0}, {0,0,0}, wedgeAngle/2}
